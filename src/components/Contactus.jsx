@@ -3,9 +3,6 @@ import { useState } from 'react';
 import '@fortawesome/fontawesome-free/css/all.css';
 import { faPhone , faMobile , faEnvelope , faLocationDot } from "@fortawesome/free-solid-svg-icons";
 import axios from 'axios';
-import { toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
-
 
 import './Contactus.css';
 
@@ -22,16 +19,14 @@ const Contactus = () => {
       const response = await axios.post('https://caliberbackend.onrender.com/send-email', Object.fromEntries(formData));
       if (response.status === 200) {
         console.log("sucessfull")
-        toast.success('Email sent successfully!');
-        window.alert("Sent Successfully");
+        window.alert('Email sent successfully!');
       } else {
         throw new Error('Failed to send email');
-        window.alert("Error while processing");
+        window.alert('Error while processing');
       }
     } catch (error) {
       console.error('Error sending email:', error);
-      window.alert("Error while processing");
-      toast.error('Failed to send email. Please try again later.');
+      window.alert('Failed to send email. Please try again later.');
     }
   };
 
