@@ -1,6 +1,5 @@
 import React, { useRef } from 'react';
 import { useState } from 'react';
-import '@fortawesome/fontawesome-free/css/all.css';
 import { faPhone , faMobile , faEnvelope , faLocationDot } from "@fortawesome/free-solid-svg-icons";
 import axios from 'axios';
 
